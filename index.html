@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14302b">
+<meta name="description" content="Rajkumar Shop, Charali, Digboi. Sarees, kurtis, menswear and kidswear. Order on WhatsApp.">
+<title>Rajkumar Shop | Fine Clothing, Charali, Digboi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f7f3ea;--card:#fffdf8;--ink:#14302b;--mut:#6a766f;--gold:#b8914a;--line:#e4dccb;--hero:#14302b;--hero-ink:#f7f3ea;--btn-ink:#f7f3ea;--wa:#1b8f4e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1c19;--card:#172824;--ink:#f1ead9;--mut:#9fb0a8;--gold:#d2ab62;--line:#2a3e38;--hero:#0a1412;--btn-ink:#0f1c19}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1c19;--card:#172824;--ink:#f1ead9;--mut:#9fb0a8;--gold:#d2ab62;--line:#2a3e38;--hero:#0a1412;--btn-ink:#0f1c19}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.5 Jost,system-ui,sans-serif;max-width:520px;margin-inline:auto;min-height:100vh;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));position:relative}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hero);z-index:30}
+h1,h2{font-family:'Cormorant Garamond',Georgia,serif;margin:0}
+.hero{background:var(--hero);color:var(--hero-ink);padding:26px 20px 24px;text-align:center;border-bottom:3px solid var(--gold)}
+.hero .mono{width:54px;height:54px;border:1.5px solid var(--gold);border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;font:600 26px 'Cormorant Garamond',serif;color:var(--gold)}
+.hero h1{font-size:34px;font-weight:700;letter-spacing:.5px;line-height:1.05}
+.hero p{margin:8px 0 0;font:italic 500 18px 'Cormorant Garamond',serif;color:#e6d6b0}
+.hero .loc{margin-top:12px;font-size:12px;opacity:.8}
+.act{display:flex;gap:10px;padding:14px 16px 0}
+.act a{flex:1;text-align:center;text-decoration:none;border-radius:10px;padding:11px 6px;font-weight:500;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.act a.w{background:var(--wa);border-color:var(--wa);color:#fff}
+.trust{display:flex;justify-content:space-between;gap:6px;padding:14px 16px 4px;font-size:11.5px;color:var(--mut);text-align:center}
+.trust div{flex:1;border-top:1px solid var(--gold);padding-top:6px}
+.sticky{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);padding:10px 16px 6px}
+.sticky input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;padding:6px 15px;font:inherit;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--btn-ink);border-color:var(--ink)}
+h2.sec{font-size:24px;padding:12px 16px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:10px 16px 18px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.pic{aspect-ratio:4/5;display:grid;place-items:center;font-size:60px;position:relative;background-size:cover;background-position:center}
+.pic .off{position:absolute;top:8px;left:8px;background:var(--gold);color:#14302b;font-size:11px;font-weight:600;padding:2px 8px;border-radius:5px}
+.info{padding:10px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info h3{margin:0;font-size:13.5px;font-weight:500;line-height:1.3}
+.price b{font-size:17px;font-weight:600}.price s{color:var(--mut);margin-left:6px;font-size:12px}
+.sizes{display:flex;gap:5px;flex-wrap:wrap}
+.sz{min-width:32px;border:1px solid var(--line);background:none;color:var(--ink);border-radius:6px;padding:4px 8px;font:inherit;font-size:12px;cursor:pointer}
+.sz.on{border-color:var(--ink);background:var(--ink);color:var(--btn-ink)}
+.add{margin-top:auto;border:1px solid var(--gold);background:none;color:var(--ink);border-radius:8px;padding:10px;font:500 13px Jost,sans-serif;cursor:pointer}
+.add:active{background:var(--gold);color:#14302b}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:36px 0}
+footer{margin:8px 16px 0;padding:20px 0;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:13px}
+footer h2{color:var(--ink);font-size:22px;margin-bottom:6px}
+footer a{color:var(--ink)}
+.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(520px,100%);z-index:15;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);display:none}
+.bar.show{display:block}
+.bar button{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--btn-ink);border:0;border-radius:12px;padding:14px 18px;font:500 15px Jost,sans-serif;cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:40}
+.ov.open{display:block}
+.sheet{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:min(520px,100%);max-height:92%;background:var(--bg);border-radius:20px 20px 0 0;display:flex;flex-direction:column}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 10px;font:600 24px 'Cormorant Garamond',serif}
+.x{background:none;border:0;color:var(--ink);font-size:28px;cursor:pointer;line-height:1}
+.items{flex:1;overflow:auto;padding:0 18px;min-height:60px}
+.it{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.th{width:50px;height:62px;border-radius:8px;display:grid;place-items:center;font-size:26px;background-size:cover;background-position:center;flex:none}
+.it .m{flex:1;font-size:13.5px}.it .m span{color:var(--mut);display:block;font-size:12px}
+.q{display:flex;align-items:center;gap:9px}.q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+.foot{padding:12px 18px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.foot input,.foot textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.tot{display:flex;justify-content:space-between;font-weight:600;font-size:17px}
+.wa{display:block;text-align:center;background:var(--wa);color:#fff;text-decoration:none;border-radius:12px;padding:14px;font-weight:600;font-size:15px}
+.wa[aria-disabled=true]{opacity:.45;pointer-events:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mono">R</div>
+  <h1>Rajkumar Shop</h1>
+  <p>Where every thread tells a story</p>
+  <div class="loc">Charali, Digboi, Assam – 786171 · Since 1998</div>
+</header>
+
+<nav class="act">
+  <a class="w" id="chatTop" href="#" target="_blank" rel="noopener">WhatsApp us</a>
+  <a id="callTop" href="#">Call</a>
+  <a id="mapTop" href="#" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<div class="trust">
+  <div>Free delivery in Digboi</div>
+  <div>Easy 7-day exchange</div>
+  <div>Cash on delivery</div>
+</div>
+
+<div class="sticky">
+  <input id="q" type="search" placeholder="Search kurti, saree, shirt…" aria-label="Search products">
+  <div class="chips" id="chips"></div>
+</div>
+
+<h2 class="sec" id="secTitle">All collections</h2>
+<main class="grid" id="grid"></main>
+
+<footer>
+  <h2>Visit our shop</h2>
+  Rajkumar Shop<br>Charali, Digboi, Tinsukia, Assam – 786171<br>
+  Open daily 10:00 am – 8:30 pm<br>
+  <a id="callFoot" href="#">+91 98765 43210</a><br><br>
+  © Rajkumar Shop · Made with care in Digboi
+</footer>
+
+<div class="bar" id="bar"><button id="openCart"><span><span id="cnt">0</span> items</span><span>View cart · <b id="barTot">₹0</b></span></button></div>
+
+<div class="ov" id="ov">
+  <section class="sheet" role="dialog" aria-label="Your cart">
+    <div class="dh">Your cart <button class="x" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="items" id="items"></div>
+    <div class="foot">
+      <div class="tot"><span>Total</span><span id="tot">₹0</span></div>
+      <input id="nm" placeholder="Your name" autocomplete="name">
+      <textarea id="ad" rows="2" placeholder="Delivery address & phone number" autocomplete="street-address"></textarea>
+      <a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-disabled="true">Place order on WhatsApp</a>
+    </div>
+  </section>
+</div>
+
+<script>
+// ===== SHOP SETTINGS: edit these =====
+const SHOP="Rajkumar Shop";
+const PHONE="919876543210";          // dummy: country code + number, no + or spaces
+const MAP="https://www.google.com/maps/search/?api=1&query=Charali+Digboi+Assam";
+// img: paste a photo link to show a real picture; otherwise a colour swatch is shown
+const PRODUCTS=[
+ {id:1,name:"Cotton Printed Kurti",cat:"Kurtis",price:499,mrp:899,e:"👗",c:"#c58b2a",sizes:["S","M","L","XL"]},
+ {id:2,name:"Rayon Anarkali Kurti Set",cat:"Kurtis",price:799,mrp:1499,e:"👗",c:"#9c2f3f",sizes:["M","L","XL","XXL"]},
+ {id:3,name:"Banarasi Silk Saree",cat:"Sarees",price:1499,mrp:2999,e:"🥻",c:"#6e1f3a",sizes:["Free"]},
+ {id:4,name:"Cotton Daily Wear Saree",cat:"Sarees",price:599,mrp:999,e:"🥻",c:"#2f6f5e",sizes:["Free"]},
+ {id:5,name:"Assam Mekhela Chador",cat:"Sarees",price:1899,mrp:3200,e:"🥻",c:"#c9a24a",sizes:["Free"]},
+ {id:6,name:"Men’s Checked Shirt",cat:"Men",price:549,mrp:999,e:"👔",c:"#3b5b9d",sizes:["M","L","XL","XXL"]},
+ {id:7,name:"Men’s Cotton T-Shirt",cat:"Men",price:299,mrp:599,e:"👕",c:"#1f3a4a",sizes:["S","M","L","XL"]},
+ {id:8,name:"Men’s Denim Jeans",cat:"Men",price:899,mrp:1599,e:"👖",c:"#4a6a8a",sizes:["30","32","34","36"]},
+ {id:9,name:"Kids Party Frock",cat:"Kids",price:449,mrp:799,e:"👧",c:"#d96ca0",sizes:["2-3Y","4-5Y","6-7Y"]},
+ {id:10,name:"Kids Kurta Pyjama",cat:"Kids",price:599,mrp:999,e:"🧒",c:"#b9772a",sizes:["2-3Y","4-5Y","6-7Y"]},
+ {id:11,name:"Women’s Palazzo Pants",cat:"Women",price:349,mrp:699,e:"👖",c:"#5b3a8c",sizes:["M","L","XL"]},
+ {id:12,name:"Winter Woollen Shawl",cat:"Women",price:699,mrp:1299,e:"🧥",c:"#6b4f3a",sizes:["Free"]}
+];
+// =====================================
+const $=s=>document.querySelector(s);
+const rs=n=>"₹"+n.toLocaleString("en-IN");
+let cat="All",term="",pick={},cart=[];
+try{cart=JSON.parse(localStorage.getItem("rk_cart")||"[]")}catch(e){}
+const save=()=>{try{localStorage.setItem("rk_cart",JSON.stringify(cart))}catch(e){}};
+const bg=p=>p.img?`background-image:url('${p.img}')`:`background:linear-gradient(150deg,${p.c},${p.c}aa)`;
+$("#chatTop").href=`https://wa.me/${PHONE}?text=${encodeURIComponent("Hello "+SHOP+", I have a question.")}`;
+$("#callTop").href=$("#callFoot").href="tel:+"+PHONE;
+$("#mapTop").href=MAP;
+
+function chips(){
+  const cats=["All",...new Set(PRODUCTS.map(p=>p.cat))];
+  $("#chips").innerHTML=cats.map(c=>`<button class="chip ${c===cat?"on":""}" data-c="${c}">${c}</button>`).join("");
+}
+function grid(){
+  const list=PRODUCTS.filter(p=>(cat==="All"||p.cat===cat)&&p.name.toLowerCase().includes(term));
+  $("#secTitle").textContent=cat==="All"?"All collections":cat;
+  $("#grid").innerHTML=list.length?list.map(p=>{
+    const sel=pick[p.id]||p.sizes[0],off=Math.round((1-p.price/p.mrp)*100);
+    return `<article class="p"><div class="pic" style="${bg(p)}">${p.img?"":p.e}<span class="off">${off}% off</span></div>
+    <div class="info"><h3>${p.name}</h3><div class="price"><b>${rs(p.price)}</b><s>${rs(p.mrp)}</s></div>
+    <div class="sizes">${p.sizes.map(s=>`<button class="sz ${s===sel?"on":""}" data-p="${p.id}" data-s="${s}">${s}</button>`).join("")}</div>
+    <button class="add" data-add="${p.id}">Add to cart</button></div></article>`}).join(""):`<p class="empty">No items found. Try another search.</p>`;
+}
+function renderCart(){
+  const n=cart.reduce((a,i)=>a+i.q,0),t=cart.reduce((a,i)=>a+i.q*i.price,0);
+  $("#cnt").textContent=n;$("#tot").textContent=$("#barTot").textContent=rs(t);
+  $("#bar").classList.toggle("show",n>0);
+  $("#items").innerHTML=cart.length?cart.map((i,k)=>`<div class="it"><div class="th" style="${bg(i)}">${i.img?"":i.e}</div>
+   <div class="m">${i.name}<span>Size ${i.size} · ${rs(i.price)}</span></div>
+   <div class="q"><button data-m="${k}" aria-label="Less">−</button>${i.q}<button data-pl="${k}" aria-label="More">+</button></div></div>`).join(""):`<p class="empty">Your cart is empty. Add something you like.</p>`;
+  const lines=cart.map((i,k)=>`${k+1}. ${i.name} (Size ${i.size}) x ${i.q} = ${rs(i.q*i.price)}`).join("\n");
+  const msg=`Hello ${SHOP}, I want to order:\n\n${lines}\n\nTotal: ${rs(t)}\n\nName: ${$("#nm").value||"-"}\nAddress: ${$("#ad").value||"-"}`;
+  const a=$("#wa");a.href=`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+  a.setAttribute("aria-disabled",cart.length?"false":"true");
+  save();
+}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.c){cat=t.dataset.c;chips();grid()}
+  else if(t.dataset.s){pick[t.dataset.p]=t.dataset.s;grid()}
+  else if(t.dataset.add){
+    const p=PRODUCTS.find(x=>x.id==t.dataset.add),size=pick[p.id]||p.sizes[0];
+    const f=cart.find(i=>i.id===p.id&&i.size===size);
+    f?f.q++:cart.push({...p,size,q:1});
+    renderCart();t.textContent="Added ✓";setTimeout(()=>t.textContent="Add to cart",900);
+  }
+  else if(t.dataset.pl){cart[t.dataset.pl].q++;renderCart()}
+  else if(t.dataset.m){const i=cart[t.dataset.m];if(--i.q<=0)cart.splice(t.dataset.m,1);renderCart()}
+  else if(t.id==="openCart")$("#ov").classList.add("open");
+  else if(t.id==="closeCart")$("#ov").classList.remove("open");
+});
+$("#ov").addEventListener("click",e=>{if(e.target.id==="ov")$("#ov").classList.remove("open")});
+$("#q").addEventListener("input",e=>{term=e.target.value.toLowerCase().trim();grid()});
+$("#nm").addEventListener("input",renderCart);$("#ad").addEventListener("input",renderCart);
+chips();grid();renderCart();
+</script>
+</body>
+</html>
